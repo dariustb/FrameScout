@@ -1,6 +1,10 @@
 name: Clang-Tidy Check
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   clang-tidy:
@@ -12,9 +16,6 @@ jobs:
 
     - name: Install clang-tidy
       run:  sudo apt-get install -y clang-tidy
-
-    - name: Configure cmake
-      run:  cmake -B ${{github.workspace}}/build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 
     # Run tidy check but alarm only for SEI CERT Secure Coding Standard errors
     - name: Run clang-tidy
