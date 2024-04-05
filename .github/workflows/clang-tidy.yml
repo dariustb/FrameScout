@@ -17,8 +17,8 @@ jobs:
     - name: Install clang-tidy
       run:  sudo apt-get install -y clang-tidy
 
-    - name: Configure cmake
-      run:  cmake -B ${{github.workspace}}/build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+    - name: Generate compile_commands.json
+      run:  cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ${{github.workspace}}
 
     # Run tidy check but alarm only for SEI CERT Secure Coding Standard errors
     - name: Run clang-tidy
