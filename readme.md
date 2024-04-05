@@ -10,7 +10,7 @@
     <img src="https://yt3.googleusercontent.com/ytc/AIf8zZTit8pdgUXqee-kRWDXO1waKq6GkEOJWgubAUF4rA=s176-c-k-c0x00ffffff-no-rj-mo" alt="Logo" width="100" height="100">
   </a>
 
-  <h1 align="center">Charles Cornell App</h1>
+  <h1 align="center">FrameScout</h1>
 
   <p align="center">
     A console application to find cropped images within a frame of a MP4/video.
