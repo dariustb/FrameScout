@@ -1,0 +1,21 @@
+name: Clang-Tidy Check
+
+on: [push, pull_request]
+
+jobs:
+  clang-tidy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Install clang-tidy
+      run:  sudo apt-get install -y clang-tidy
+
+    - name: Configure cmake
+      run:  cmake -B ${{github.workspace}}/build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+
+    # Run tidy check but alarm only for SEI CERT Secure Coding Standard errors
+    - name: Run clang-tidy
+      run:  clang-tidy -checks=* -warnings-as-errors=cert-* ${{github.workspace}}/src/**/*.cpp
