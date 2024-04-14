@@ -1,6 +1,5 @@
 <!-- PROJECT SHIELDS -->
 [![Gtest][gtest-svg]][gtest-url]
-[![Clang-tidy][tidy-svg]][tidy-url]
 ![GitHub repo size](https://img.shields.io/github/repo-size/dariustb/FrameScout)
 
 <!-- PROJECT LOGO -->
