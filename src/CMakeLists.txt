@@ -5,8 +5,11 @@ add_executable(
         framescout.m.cpp
 )
 
-target_link_libraries(framescout ${OpenCV_LIBS})
 
 add_library(framescout_core)
 add_subdirectory(core)
 
+target_link_libraries(framescout_core ${OpenCV_LIBS})
+target_link_libraries(framescout PUBLIC
+        framescout_core
+)
