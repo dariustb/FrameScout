@@ -14,4 +14,9 @@ _deps
 # Distribution / packaging
 build/
 dist/
+output/
 
+# Excluding example files
+example.mp4
+example_frame.jpg
+example_crop.jpg

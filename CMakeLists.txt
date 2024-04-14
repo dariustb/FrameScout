@@ -9,6 +9,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(FetchContent)
 
+# Find OpenCV
+find_package(OpenCV REQUIRED)
+
 # Fetch gtests
 # https://google.github.io/googletest/quickstart-cmake.html
 FetchContent_Declare(
